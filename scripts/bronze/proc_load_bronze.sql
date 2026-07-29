@@ -32,12 +32,17 @@ BEGIN
 		PRINT '>> Truncating Table : bronze.crm_cust_info';
 		TRUNCATE TABLE bronze.crm_cust_info
 		PRINT '>> Inserting Data into : bronze.crm_cust_info';
+        
+		-- MAGIC FIX: Tell SQL Server to expect Day-Month-Year format for this specific file
+		SET DATEFORMAT dmy; 
+
 		BULK INSERT bronze.crm_cust_info
 		FROM 'C:\Users\kusha\Desktop\SQL\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_crm\cust_info.csv'
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			FORMAT = 'CSV' -- Used here to cleanly strip the carriage return from the date
 		);
 
 		PRINT '>> Truncating Table : bronze.crm_prd_info';
@@ -48,7 +53,8 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			ROWTERMINATOR = '\n'
 		);
 
 		PRINT '>> Truncating Table : bronze.crm_sales_details';
@@ -59,7 +65,8 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			ROWTERMINATOR = '\n'
 		);
 
 		PRINT '----------------------------';
@@ -74,7 +81,8 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			ROWTERMINATOR = '\n'
 		);
 
 		PRINT '>> Truncating Table : bronze.erp_loc_a101';
@@ -85,7 +93,8 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			ROWTERMINATOR = '\n'
 		);
 
 		PRINT '>> Truncating Table : bronze.erp_px_cat_g1v2';
@@ -96,13 +105,14 @@ BEGIN
 		WITH (
 			FIRSTROW = 2,
 			FIELDTERMINATOR = ',',
-			TABLOCK
+			TABLOCK,
+			ROWTERMINATOR = '\n'
 		);
-		END TRY
-		BEGIN CATCH
-			PRINT '===========================';
-			PRINT 'Error Occured while loading bronze layer';
-			PRINT 'Error Message : ' + ERROR_MESSAGE();	
-			PRINT '===========================';
-		END CATCH
+	END TRY
+	BEGIN CATCH
+		PRINT '===========================';
+		PRINT 'Error Occured while loading bronze layer';
+		PRINT 'Error Message : ' + ERROR_MESSAGE();	
+		PRINT '===========================';
+	END CATCH
 END
