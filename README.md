@@ -1,68 +1,22 @@
-Data Warehouse and Analytics Project
+# sql-data-analytics-project
+A comprehensive collection of SQL scripts for data exploration, analytics, and reporting. These scripts cover various analyses such as database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation, and more.
+This repository contains SQL queries designed to help data analysts and BI professionals quickly explore, segment, and analyze data within a relational database. Each script focuses on a specific analytical theme and demonstrates best practices for SQL queries.
 
-Welcome to the Data Warehouse and Analytics Project repository! 🚀
-This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project, it highlights industry best practices in data engineering and analytics.
+---
 
+## 🛡️ License
 
-Project Overview
+This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
-This project involves:
+## 🌟 About Me
 
-1. Data Architecture: Designing a Modern Data Warehouse Using Medallion Architecture Bronze, Silver, and Gold layers.
-2. ETL Pipelines: Extracting, transforming, and loading data from source systems into the warehouse.
-3. Data Modeling: Developing fact and dimension tables optimized for analytical queries.
-4. Analytics & Reporting: Creating SQL-based reports and dashboards for actionable insights.
+Hi there! I'm **Baraa Khatib Salkini**, also known as **Data With Baraa**. I’m an IT professional and passionate YouTuber on a mission to share knowledge and make working with data enjoyable and engaging!
 
-🎯 This repository is an excellent resource for professionals and students looking to showcase expertise in:
+Let's stay in touch! Feel free to connect with me on the following platforms:
 
-a. SQL Development
-b. Data Architect
-c. Data Engineering
-d. ETL Pipeline Developer
-e. Data Modeling
-f. Data Analytics
-
-
-Important Links & Tools:
-
-Everything is for Free!
-
-a. Datasets: Access to the project dataset (csv files).
-b. SQL Server Express: Lightweight server for hosting your SQL database.
-c. SQL Server Management Studio (SSMS): GUI for managing and interacting with databases.
-d. Git Repository: Set up a GitHub account and repository to manage, version, and collaborate on your code efficiently.
-e. DrawIO: Design data architecture, models, flows, and diagrams.
-f. Notion: All-in-one tool for project management and organization.
-g. Notion Project Steps: Access to All Project Phases and Tasks.
-
-
-Project Requirements
-
-Building the Data Warehouse (Data Engineering)
-
-Objective
-
-Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making.
-
-Specifications
-
-a. Data Sources: Import data from two source systems (ERP and CRM) provided as CSV files.
-b. Data Quality: Cleanse and resolve data quality issues prior to analysis.
-c. Integration: Combine both sources into a single, user-friendly data model designed for analytical queries.
-d. Scope: Focus on the latest dataset only; historization of data is not required.
-e. Documentation: Provide clear documentation of the data model to support both business stakeholders and analytics teams.
-
-BI: Analytics & Reporting (Data Analytics)
-
-Objective
-
-Develop SQL-based analytics to deliver detailed insights into:
-
-
-Data Architecture
-
-The data architecture for this project follows Medallion Architecture Bronze, Silver, and Gold layers:
-
-1. Bronze Layer: Stores raw data as-is from the source systems. Data is ingested from CSV Files into SQL Server Database.
-2. Silver Layer: This layer includes data cleansing, standardization, and normalization processes to prepare data for analysis.
-3. Gold Layer: Houses business-ready data modeled into a star schema required for reporting and analytics.
+[![YouTube](https://img.shields.io/badge/YouTube-red?style=for-the-badge&logo=youtube&logoColor=white)](http://bit.ly/3GiCVUE)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/baraa-khatib-salkini)
+[![Website](https://img.shields.io/badge/Website-000000?style=for-the-badge&logo=google-chrome&logoColor=white)](https://www.datawithbaraa.com)
+[![Newsletter](https://img.shields.io/badge/Newsletter-FF5722?style=for-the-badge&logo=substack&logoColor=white)](https://bit.ly/BaraaNewsletter)
+[![PayPal](https://img.shields.io/badge/PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://paypal.me/baraasalkini)
+[![Join](https://img.shields.io/badge/Join-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://www.youtube.com/@datawithbaraa)
